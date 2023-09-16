@@ -10,7 +10,7 @@ program
   .option('-p, --phone <type>', 'user phone')
   .parse();
 
-const argv = program.opts();
+const option = program.opts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -35,4 +35,4 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 };
 
-invokeAction(argv);
+invokeAction(option);
